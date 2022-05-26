@@ -17,6 +17,7 @@ li {
   display: flex;
   justify-content: flex-end;
   border-bottom: 1px solid gray;
+  width: 100%;
 }
 .menu {
   display: flex;
@@ -42,7 +43,10 @@ li {
 /* MENU MOBILE */
 
 .menumobile {
+  display: none;
   background: #2c3f58;
+  width: 100%;
+  padding: 8px;
 }
 .menumobile li {
   padding: 64px 8px;
@@ -51,18 +55,12 @@ li {
   color: white;
   font-size: 24px;
 }
-.menumobile,
 .burgermenuopen,
 .burgermenuclose {
   display: none;
-}
-.burgermenucontainer {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-}
-.visibol {
-  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 8px;
 }
 
 /* MEDIA QUERIES  */
@@ -71,24 +69,20 @@ li {
   .menu {
     display: none;
   }
-  .menumobilevisibol {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    display: block;
-    padding: 8px;
-  }
+
   .burgermenuopen {
     display: block;
-    width: 40px;
-    height: 40px;
-    margin: 8px;
   }
   .burgermenuclose {
-    display: block;
-    height: 40px;
-    width: 40px;
-    margin: 8px;
+    display: none;
   }
+}
+.visibol {
+  display: block;
+}
+.none {
+  display: none;
+}
+.menumobilevisibol {
+  display: block;
 }
