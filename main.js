@@ -3,12 +3,16 @@ let openMenu = document.querySelector(".burgermenuopen");
 let closeMenu = document.querySelector(".burgermenuclose");
 
 // click sul burger menu appare menu mobile
-openMenu.addEventListener("click", () => {
+function toggleMenu() {
   menuMobile.classList.add("menumobilevisibol");
+  openMenu.classList.add("none");
   closeMenu.classList.add("visibol");
-});
+}
 // click sulla x e scompare il menu mobile
-closeMenu.addEventListener("click", () => {
+function close() {
   menuMobile.classList.remove("menumobilevisibol");
-  openMenu.classList.add("vilibol");
-});
+  closeMenu.classList.remove("visibol");
+  openMenu.classList.remove("none");
+}
+openMenu.addEventListener(`click`, toggleMenu);
+closeMenu.addEventListener(`click`, close);
